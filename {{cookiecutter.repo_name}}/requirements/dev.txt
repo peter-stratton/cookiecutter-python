@@ -1,7 +1,7 @@
 -r base.txt
 
 pytest
-coverage
+pytest-cov
 bandit
 prospector
 bump2version
