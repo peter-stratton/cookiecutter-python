@@ -1,0 +1,7 @@
+{
+    "repo_name": "pyproject",
+    "full_name": "Peter Stratton",
+    "email": "pstratton@halescode.com",
+    "version": "0.1.0",
+    "container_registry": "https://hub.docker.com/repository/docker"
+}

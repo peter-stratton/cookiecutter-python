@@ -1,0 +1,7 @@
+-r base.txt
+
+pytest
+coverage
+bandit
+prospector
+bump2version
