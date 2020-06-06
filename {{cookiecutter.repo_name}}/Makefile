@@ -17,14 +17,17 @@ dev-install:
 	@pip install -U -e .
 
 test:
+	@pytest --runslow
+
+quick-test:
 	@pytest
 
 coverage: test
 	@open ./reports/index.html
 
 lint:
-	@echo "\n${BLUE}Running Prospector against source files...${NC}\n"
-	@prospector ${MODULE}
+	@echo "\n${BLUE}Running linter against source files...${NC}\n"
+	@flake8 ${MODULE} -v
 	@echo "\n${BLUE}Running Bandit against source files...${NC}\n"
 	@bandit -r ${MODULE}
 

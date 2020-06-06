@@ -3,5 +3,5 @@
 pytest
 pytest-cov
 bandit
-prospector
+flake8
 bump2version
