@@ -4,8 +4,8 @@ REGISTRY={{cookiecutter.container_registry}}
 BASE_DOCKERFILE=Base.Dockerfile
 APP_DOCKERFILE=App.Dockerfile
 TAG=latest
-BLUE='\033[0;34m'
-NC='\033[0m' # No Color
+BLUE=\033[0;34m
+NC=\033[0m # No Color
 
 run:
 	@python -m $(MODULE)
@@ -26,9 +26,9 @@ coverage: test
 	@open ./reports/index.html
 
 lint:
-	@echo "\n${BLUE}Running linter against source files...${NC}\n"
-	@flake8 ${MODULE} -v
-	@echo "\n${BLUE}Running Bandit against source files...${NC}\n"
+	@echo "\n${BLUE}Lint and Score Maintainability${NC}\n"
+	@flake8 ${MODULE} --radon-max-cc 10 && radon mi ${MODULE}
+	@echo "\n${BLUE}Bandit Security Audit${NC}\n"
 	@bandit -r ${MODULE}
 
 clean:
