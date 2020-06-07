@@ -8,7 +8,8 @@ WORKDIR /install
 COPY requirements/base.txt /base.txt
 COPY requirements/prod.txt /requirements.txt
 
-RUN pip install --install-option="--prefix=/install" -r /requirements.txt
+RUN pip install -U pip
+RUN pip install --target /install -r /requirements.txt
 
 FROM base
 
