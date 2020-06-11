@@ -14,6 +14,10 @@ Upgrade pip and install the dependencies
 pip install -U pip
 pip install -r requirements/dev.txt
 ```
+Install `{{cookiecutter.repo_name}}` in editable mode
+```
+make dev-install
+```
 Run the tests
 ```
 make test
