@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: {{cookiecutter.repo_name}}
+  namespace: {{cookiecutter.repo_name}}
+spec:
+  containers:
+    - name: {{cookiecutter.repo_name}}
+      image: {{cookiecutter.repo_name}}
+      command:
+        - {{cookiecutter.repo_name}}

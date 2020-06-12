@@ -1,0 +1,11 @@
+apiVersion: skaffold/v2beta2
+kind: Config
+metadata:
+  name: {{cookiecutter.repo_name}}
+build:
+  artifacts:
+    - image: {{cookiecutter.repo_name}}
+deploy:
+  kubectl:
+    manifests:
+      - {{cookiecutter.repo_name}}.yaml
