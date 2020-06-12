@@ -23,6 +23,14 @@ Run the tests
 make test
 ```
 
+Skaffold Dev
+------------
+First, install [skaffold](https://skaffold.dev/). Next, run the following comand which will
+clear out your local tags (hopefully they'll fix this soon) and start skaffold in dev mode.
+```
+make dev-skaffold
+```
+
 Creating a Release
 ----------------
 1 - Move the `[unreleased]` CHANGELOG section to a version section

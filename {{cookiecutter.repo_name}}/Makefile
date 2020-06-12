@@ -2,7 +2,7 @@ MODULE={{cookiecutter.repo_name}}
 IMAGE={{cookiecutter.repo_name}}
 REGISTRY={{cookiecutter.container_registry}}
 BASE_DOCKERFILE=Base.Dockerfile
-APP_DOCKERFILE=App.Dockerfile
+APP_DOCKERFILE=Dockerfile
 TAG=latest
 BLUE=\033[0;34m
 NC=\033[0m # No Color
@@ -15,6 +15,10 @@ install:
 
 dev-install:
 	@pip install -U -e .
+
+dev-skaffold: docker-deploy-base
+	@git tag -d $(git tag -l)
+	@skaffold dev
 
 test:
 	@pytest --runslow
