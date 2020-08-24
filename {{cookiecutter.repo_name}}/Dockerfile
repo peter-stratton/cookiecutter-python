@@ -1,5 +1,7 @@
 FROM {{cookiecutter.container_registry}}/{{cookiecutter.repo_name}}-base:latest
 
+ENV PYTHONUNBUFFERED 1
+
 ENV PATH=/root/.local/bin:$PATH
 
 COPY ./{{cookiecutter.repo_name}} /app/{{cookiecutter.repo_name}}
