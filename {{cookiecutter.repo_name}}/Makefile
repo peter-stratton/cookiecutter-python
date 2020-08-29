@@ -41,7 +41,7 @@ clean:
 docker-login:
 	@echo "\n${BLUE}Getting container registry creds...${NC}\n"
 	{% if 'amazonaws' in cookiecutter.container_registry %}
-	@aws ecr get-login --no-include-email | sh
+	@aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin $(REGISTRY)
 	{% else %}
 	@docker login
 	{% endif %}
