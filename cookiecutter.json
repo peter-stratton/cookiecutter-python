@@ -2,9 +2,10 @@
     "repo_name": "pyproject",
     "full_name": "Peter Stratton",
     "email": "pstratton@halescode.com",
-    "version": "0.1.0",
+    "version": "0.0.1",
     "container_registry": "https://hub.docker.com/repository/docker",
     "github_org_name": "halescode",
     "terraform_io_org": "halescode",
-    "short_description": "A python app for doing things."
+    "short_description": "A python app for doing things.",
+    "command_line_interface": ["click", "none"]
 }

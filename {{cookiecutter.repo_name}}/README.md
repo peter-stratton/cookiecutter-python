@@ -1,5 +1,6 @@
 {{cookiecutter.repo_name}}
 =====
+![{% if 'holmansv' in cookiecutter.github_org_name %}HSV {% endif %}PyPi Version](https://img.shields.io/badge/%5B{% if 'holmansv' in cookiecutter.github_org_name %}HSV%20{% endif %}PyPi%5D%20{{cookiecutter.repo_name}}-v{{cookiecutter.version}}-<COLOR>.svg)
 
 {{cookiecutter.short_description}}
 

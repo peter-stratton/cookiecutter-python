@@ -29,11 +29,13 @@ setup(
     description='{{cookiecutter.short_description}}',
     packages=find_packages(),
     install_requires=[],
+    {% if cookiecutter.command_line_interface not in ['none'] %}
     entry_points={
         'console_scripts': [
             '{{cookiecutter.repo_name}} = {{cookiecutter.repo_name}}.app:main'
         ]
     },
+    {% endif %}
     tests_require=['pytest'],
     cmdclass={'test':PyTest},
 )
