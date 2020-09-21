@@ -1,8 +1,3 @@
--r base.txt
+-r test.txt
 
-pytest
-pytest-cov
-bandit
-flake8
-radon
 bump2version
